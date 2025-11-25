@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang!</title>
+    <link rel="icon" type="image/png" href="images/profile.jpeg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        .landing {
+            background: #fff;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        h1 {
+            margin-top: 0;
+            color: #1f6feb;
+            font-size: 34px;
+        }
+        
+        p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #444;
+        }
+        
+        a.btn {
+            background: #1f6feb;
+            padding: 12px 26px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 3px 8px rgba(31, 110, 235, 0.3);
+            transition: 0.25s ease;
+        }
+        
+        a.btn:hover {
+            background: #0d5ede;
+            box-shadow: 0 4px 12px rgba(31, 110, 235, 0.45);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="landing">
+        <h1>Selamat datang di Website saya!</h1>
+        <p>Website ini merupakan hasil dari tugas atau penerapan materi PWA!</p>
+
+        <a href="about.html" class="btn">Lihat Fortofolio Saya!</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
