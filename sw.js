@@ -1,10 +1,12 @@
 const CACHE_NAME = 'pwa-cache-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/about.html',
-    '/style.css',
-    '/offline.html'
+    'index.html',
+    'about.html',
+    'style.css',
+    'offline.html',
+    'manifest.json',
+    'images/icons/icon-192.png',
+    'images/icons/icon-512.png'
 ];
 
 // Install
@@ -35,8 +37,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
-            return response || fetch(event.request)
-                .catch(() => caches.match('/offline.html'));
+            return (
+                response ||
+                fetch(event.request).catch(() => caches.match('offline.html'))
+            );
         })
     );
 });
