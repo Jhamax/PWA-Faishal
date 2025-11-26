@@ -5,6 +5,7 @@ const urlsToCache = [
     'style.css',
     'offline.html',
     'manifest.json',
+    'images/profile.jpeg',
     'images/icons/icon-192.png',
     'images/icons/icon-512.png'
 ];
@@ -44,3 +45,4 @@ self.addEventListener('fetch', event => {
         })
     );
 });
+
